@@ -3,4 +3,13 @@
     <string name="today">Today</string>
     <string name="list">List</string>
     <string name="statistics">Statistics</string>
+    <string name="searchBarKeyToday">Search for Unreviewed Content</string>
+    <string name="cancel">Cancel</string>
+    <string name="unreviewed">Unreviewed</string>
+    <string name="added_contents">Added Contents Today</string>
+    <string name="searchBarKeyList">Search for Added Content</string>
+    <string name="all_added_contents">All Added Contents</string>
+    <string name="this_page_is_not_available">Sorry! This page is not available now.</string>
+    <string name="we_are_trying_to_finish_it_soon">We are trying to finish it soon.</string>
+    <string name="add_new_content">Add New Content</string>
 </resources>
