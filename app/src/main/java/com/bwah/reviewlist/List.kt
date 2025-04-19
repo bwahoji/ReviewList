@@ -52,7 +52,7 @@ fun ListPage(
     }
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize()/*.nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)*/.overScrollHorizontal(),
+        modifier = Modifier.fillMaxSize().nestedScroll(topAppBarScrollBehavior.nestedScrollConnection),
         contentPadding = PaddingValues(
             top = padding.calculateTopPadding(),
             bottom = paddingBottom

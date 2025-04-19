@@ -27,6 +27,8 @@ import top.yukonga.miuix.kmp.basic.InputField
 import top.yukonga.miuix.kmp.icon.MiuixIcons
 import top.yukonga.miuix.kmp.basic.*
 import top.yukonga.miuix.kmp.theme.Colors
+import top.yukonga.miuix.kmp.theme.MiuixTheme
+import top.yukonga.miuix.kmp.utils.overScrollVertical
 
 @Composable
 fun FabUI(
@@ -34,7 +36,12 @@ fun FabUI(
     colors: Colors,
     finish: (() -> Unit)
 ) {
+
+    val checkboxStates = remember { List(15) { mutableStateOf(false) } }
     Scaffold (
+        modifier = Modifier
+            .fillMaxSize(),
+        containerColor = colors.surfaceContainer,
         contentColor = colors.surfaceContainer,
         topBar = {
             SmallTopAppBar(
@@ -47,7 +54,8 @@ fun FabUI(
                     ) {
                         top.yukonga.miuix.kmp.basic.Icon(
                             imageVector = Icons.Rounded.Check,
-                            contentDescription = "OK"
+                            contentDescription = "OK",
+                            tint = colors.onSurface
                         )
                     }
                 }
@@ -56,12 +64,18 @@ fun FabUI(
     ){ padding ->
         LazyColumn (
             modifier = Modifier
-                .padding(horizontal = 12.dp, vertical = 6.dp)
-                .fillMaxSize(),
+                .overScrollVertical(),
             contentPadding = padding
         ){
-            
+            items(checkboxStates.size, key = { it }) { idx ->
+                TodoItem(
+                    checked = checkboxStates[idx].value,
+                    text = "Item $idx",
+                    colors = colors,
+                    onCheckedChange = { checkboxStates[idx].value = it },
+                    onClick = { checkboxStates[idx].value = !checkboxStates[idx].value }
+                )
+            }
         }
     }
-
 }

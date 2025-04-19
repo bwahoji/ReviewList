@@ -41,19 +41,18 @@ fun TodayPage(
     padding: PaddingValues,
     colors: Colors
 ) {
-    val listState = rememberLazyListState()
     var searchValue by remember { mutableStateOf("") }
     var expanded by remember { mutableStateOf(false) }
 
     // 使用 List 缓存状态，避免每次重建
     val checkboxStates = remember { List(15) { mutableStateOf(false) } }
     LazyColumn(
-        modifier = Modifier./*nestedScroll(topAppBarScrollBehavior.nestedScrollConnection).*/overScrollVertical(),
-        contentPadding = PaddingValues(
+        modifier = Modifier.fillMaxSize().nestedScroll(topAppBarScrollBehavior.nestedScrollConnection)/*.overScrollVertical()*/,
+        contentPadding = padding/*PaddingValues(
             top = padding.calculateTopPadding(),
             bottom = padding.calculateBottomPadding()
-        ),
-        state = listState,
+        )*/,
+//        state = listState,
     ) {
         // 搜索栏部分
         item {
