@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">复习清单</string>
+    <string name="today">今日</string>
+    <string name="list">列表</string>
+    <string name="statistics">统计</string>
+    <string name="searchBarKeyToday">搜索待复习内容</string>
+    <string name="cancel">取消</string>
+    <string name="unreviewed">待复习</string>
+    <string name="added_contents">今日已添加</string>
+    <string name="searchBarKeyList">搜索已添加内容</string>
+    <string name="all_added_contents">所有已添加内容</string>
+    <string name="this_page_is_not_available">抱歉！此页面尚不可用。</string>
+    <string name="we_are_trying_to_finish_it_soon">我们将尽快完成它。</string>
+    <string name="add_new_content">添加新内容</string>
+</resources>
