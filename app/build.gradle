@@ -39,7 +39,7 @@ android {
 
 dependencies {
 
-    implementation ("top.yukonga.miuix.kmp:miuix:0.4.0")
+    implementation (libs.miuix)
     implementation libs.androidx.core.splashscreen
     implementation libs.androidx.core.ktx
     implementation libs.androidx.lifecycle.runtime.ktx
